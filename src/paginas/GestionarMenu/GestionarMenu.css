@@ -1,0 +1,222 @@
+.gestion-container {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 24px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gestion-col-izquierda {
+  display: flex;
+  flex-direction: column;
+}
+
+.gestion-col-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.titulo-seccion-gestion {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 15px 0 10px 5px;
+  letter-spacing: 0.5px;
+}
+
+/* SELECCIÓN DE LOCAL (RADIALES) */
+.bloque-seleccion-local {
+  margin-bottom: 5px;
+}
+
+.contenedor-radiales-locales {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-local {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radio-local input {
+  display: none;
+}
+
+.radio-custom {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #8e8e93;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-local input:checked + .radio-custom {
+  border-color: #000000;
+  background-color: #000000;
+}
+
+/* TARJETAS BLANCAS CON CABECERAS MULTICOLORES */
+.tarjeta-blanca-gestion-tabla {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  padding: 0 0 15px 0;
+  overflow: hidden;
+}
+
+.tarjeta-blanca-gestion-tabla.compacta {
+  height: 220px;
+}
+
+.header-tabla-multicolor {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.2fr;
+}
+
+.header-tabla-multicolor-b {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.tab-segmento, .tab-segmento-drop {
+  padding: 10px 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.tab-segmento.rojo { background-color: #ff3b30; }
+.tab-segmento.azul { background-color: #007aff; }
+.tab-segmento.amarillo { background-color: #ffcc00; color: black; }
+.tab-segmento.azul-b { background-color: #3878e4; }
+.tab-segmento-drop.verde { background-color: #34c759; display: flex; align-items: center; justify-content: center; }
+.tab-segmento-drop.rojo { background-color: #ff3b30; display: flex; align-items: center; justify-content: center; }
+
+/* TABLAS DE GESTIÓN */
+.tabla-gestion-productos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-gestion-productos th {
+  font-size: 0.75rem;
+  padding: 10px 15px;
+  color: black;
+}
+
+.th-rojo { background-color: #ff766f; color: white !important; }
+.th-amarillo { background-color: #ffe066; }
+
+.tabla-gestion-productos td {
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  color: #3a3a3c;
+  border-bottom: 1px solid #f2f2f7;
+}
+
+.txt-bold { font-weight: 700; color: black; }
+
+.celda-acciones-iconos {
+  display: flex;
+  gap: 12px;
+}
+
+.accion-link-txt {
+  color: #8e8e93;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.accion-link-txt.desactivar {
+  color: #ff3b30;
+}
+
+/* FILA INFERIOR */
+.fila-tablas-gestion-inferior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* COLUMNA DERECHA */
+.wrapper-logo-circular-gestion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.circulo-negro-gestion {
+  background-color: #000000;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.circulo-negro-gestion img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.panel-botones-principales-gestion {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo-botones-txt-side {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 10px 0 4px 5px;
+}
+
+.btn-principal-g {
+  width: 100%;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 20px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-principal-g:hover {
+  transform: scale(1.02);
+}
+
+.icon-btn-g {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}

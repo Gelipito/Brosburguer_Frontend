@@ -1,0 +1,254 @@
+.gastos-container {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 24px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gastos-col-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gastos-col-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.tarjeta-blanca-gastos {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 35px;
+  padding: 25px 30px;
+}
+
+.encabezados-gastos-flex {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #e5e5ea;
+  padding-bottom: 12px;
+}
+
+.selector-gastos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.selector-gastos h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.icono-drop {
+  color: #8e8e93;
+  font-size: 0.9rem;
+}
+
+.resumen-rapido-gastos {
+  display: flex;
+  gap: 60px;
+  margin-top: 15px;
+}
+
+.txt-gris {
+  color: #8e8e93;
+  font-size: 0.8rem;
+  margin: 0 0 4px 0;
+}
+
+.txt-negro-bold {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.tabla-seccion-titulo {
+  color: #aeaeae;
+  font-size: 0.85rem;
+  margin: 20px 0 10px 0;
+}
+
+/* TABLA INTERNA */
+.tabla-gastos-operacionales {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-gastos-operacionales th {
+  color: #aeaeae;
+  font-size: 0.75rem;
+  font-weight: normal;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f2f2f7;
+}
+
+.tabla-gastos-operacionales td {
+  padding: 12px 0;
+  font-size: 0.85rem;
+  color: #3a3a3c;
+}
+
+.tabla-gastos-operacionales tr:not(:last-child) td {
+  border-bottom: 1px solid #f2f2f7;
+}
+
+.txt-bold {
+  font-weight: 700;
+  color: #000000;
+}
+
+.txt-monto-rojo {
+  font-weight: 800;
+  color: #ff3b30 !important;
+}
+
+.icono-eliminar-gasto {
+  color: #aeaebd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.icono-eliminar-gasto:hover {
+  color: #ff3b30;
+}
+
+
+.badge-categoria {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.badge-categoria.materia-prima { background-color: #ffe600; color: black; }
+.badge-categoria.insumos { background-color: #e5e5ea; color: black; }
+.badge-categoria.servicios { background-color: #ffcc00; color: black; }
+.badge-categoria.logística { background-color: #ff453a; color: white; }
+
+/* TARJETAS DE COLOR INFERIORES */
+.fila-tarjetas-gastos-totales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tarjeta-gasto-roja-total,
+.tarjeta-gasto-negra-proveedores {
+  border-radius: 30px;
+  padding: 24px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.tarjeta-gasto-roja-total { background-color: #ff3b30; }
+.tarjeta-gasto-negra-proveedores { background-color: #2c2c2e; }
+
+.header-gasto-color {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.tarjeta-gasto-roja-total h2,
+.tarjeta-gasto-negra-proveedores h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+
+.wrapper-logo-circular-gastos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.circulo-negro-gastos {
+  background-color: #000000;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.circulo-negro-gastos img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.tarjeta-amarilla-gastos {
+  background-color: #ffcc00;
+  color: #000000;
+  border-radius: 30px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-tarjeta-amarilla-g {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-tarjeta-amarilla-g h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.lista-gastos-analisis {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-analisis-linea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-gasto-mini {
+  background-color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #ff3b30;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.info-gasto-txt h4 {
+  margin: 0 0 2px 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.info-gasto-txt p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #3a3a3c;
+  line-height: 1.2;
+}

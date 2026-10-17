@@ -1,0 +1,259 @@
+/* Productos.css - Diseño Empresarial Profesional */
+:root {
+  --primary: #ffcc00;
+  --primary-dark: #e6b800;
+  --bg-dark: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --border: #333333;
+  --danger: #ff4d4d;
+  --success: #00e676;
+  --surface: #252525;
+}
+
+.admin-dashboard {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+}
+
+.header-logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.header-titles h1 { margin: 0; font-size: 1.4rem; }
+.header-titles p { margin: 0; color: var(--text-muted); font-size: 0.85rem; }
+
+.search-bar {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-bar input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 10px 12px 10px 35px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.enterprise-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.enterprise-table th {
+  text-align: left;
+  padding: 12px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.enterprise-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.txt-price { color: var(--primary); font-weight: 700; }
+.txt-bold { font-weight: 600; }
+.txt-muted { color: var(--text-muted); font-size: 0.85rem; }
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.btn-icon.edit { color: var(--text-muted); }
+.btn-icon.delete { color: var(--danger); }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.wide-modal {
+  width: 90%;
+  max-width: 650px;
+}
+
+.ingredients-selector-section {
+  margin-top: 1.5rem;
+  background: var(--surface);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.section-header-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.section-header-mini h3 { margin: 0; font-size: 0.95rem; flex-grow: 1; }
+
+.btn-add-mini {
+  background: rgba(0, 230, 118, 0.1);
+  color: var(--success);
+  border: 1px solid var(--success);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ingredients-list-form {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredient-row-form {
+  display: grid;
+  grid-template-columns: 1fr 100px 40px;
+  gap: 10px;
+  align-items: center;
+}
+
+.ingredient-row-form select, 
+.ingredient-row-form input {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.enterprise-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.enterprise-form input[type="text"],
+.enterprise-form input[type="number"] {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: white;
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Scrollbar */
+.ingredients-list-form::-webkit-scrollbar { width: 6px; }
+.ingredients-list-form::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
