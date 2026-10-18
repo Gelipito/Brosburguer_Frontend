@@ -23,19 +23,21 @@ const BarraSuperior = () => {
       </div>
 
       <div className="barra-centro">
-        <h2>PANEL DE CONTROL - BROS BURGER</h2>
+        <h2 className="titulo-panel">PANEL DE CONTROL - BROS BURGER</h2>
       </div>
 
       <div className="barra-derecha">
-        <button className="btn-icono">
-          <FaHeart />
-        </button>
-        <button className="btn-icono">
-          <FaBell />
-        </button>
+        <div className="acciones-iconos">
+          <button className="btn-icono" aria-label="Favoritos">
+            <FaHeart />
+          </button>
+          <button className="btn-icono" aria-label="Notificaciones">
+            <FaBell />
+          </button>
+        </div>
         
         <div className="contenedor-fecha">
-          <FaCalendarAlt style={{ marginRight: '6px' }} />
+          <FaCalendarAlt className="icono-fecha" />
           <span>{obtenerFechaActual()}</span>
         </div>
 

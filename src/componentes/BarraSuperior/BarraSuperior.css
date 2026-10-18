@@ -1,20 +1,26 @@
+/* ==========================================
+   Base Styles (Your original design preserved)
+   ========================================== */
 .barra-superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ff3b30;
   padding: 10px 24px;
-  height: 70px;
+  min-height: 70px; /* Changed height to min-height for smooth wrapping on small screens */
   color: white;
   border-radius: 35px;
   margin: 15px 15px 5px 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  gap: 15px; /* Ensures elements don't collide */
+  box-sizing: border-box;
 }
 
 .barra-izquierda {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0; /* Keeps brand/logo intact */
 }
 
 .logo-mario {
@@ -31,20 +37,38 @@
   line-height: 1;
 }
 
-.marca-top { font-size: 1.2rem; }
-.marca-bottom { font-size: 1rem; color: #ffe600; }
+.marca-top { 
+  font-size: 1.2rem; 
+}
+
+.marca-bottom { 
+  font-size: 1rem; 
+  color: #ffe600; 
+}
+
+/* --- Center Section Fluid Responsiveness --- */
+.barra-centro {
+  flex: 1;
+  text-align: center;
+  min-width: 0; /* Essential to prevent text overflow in Flexbox */
+}
 
 .barra-centro h2 {
-  font-size: 1.4rem;
+  /* Fluid font sizing using clamp: min 0.95rem, ideal 1.5vw, max 1.4rem */
+  font-size: clamp(0.95rem, 1.5vw, 1.4rem);
   font-weight: 800;
   letter-spacing: 0.5px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Gracefully truncates with '...' on tight viewports */
 }
 
 .barra-derecha {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-shrink: 0; /* Prevents controls from collapsing */
 }
 
 .btn-icono {
@@ -53,6 +77,10 @@
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
 }
 
 .contenedor-fecha {
@@ -63,6 +91,7 @@
   border-radius: 20px;
   font-weight: bold;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .flecha-final {
@@ -73,4 +102,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ==========================================
+   Responsive Breakpoints
+   ========================================== */
+
+/* Tablets / Laptops with narrow viewports */
+@media (max-width: 900px) {
+  .barra-superior {
+    padding: 10px 18px;
+    margin: 10px;
+  }
+
+  .flecha-final {
+    display: none; /* Hide secondary detail to save horizontal space */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 650px) {
+  .barra-superior {
+    flex-wrap: wrap;
+    border-radius: 20px; /* Slightly lower radius for compact mobile display */
+    padding: 12px 16px;
+  }
+
+  .barra-centro {
+    order: 3; /* Places title on a clean second row underneath */
+    flex: 0 0 100%;
+    margin-top: 4px;
+  }
+
+  .barra-centro h2 {
+    white-space: normal; /* Allows title to wrap cleanly on mobile */
+    font-size: 1.1rem;
+  }
+
+  .contenedor-fecha span {
+    display: none; /* Shows icon only on small screens to maintain compact layout */
+  }
+
+  .contenedor-fecha {
+    padding: 6px 10px;
+  }
 }
